@@ -17,6 +17,7 @@ import Atelier from "./pages/Atelier.jsx";
 import Stages from "./pages/Stages.jsx";
 import Beauty from "./pages/Beauty.jsx";
 import Account from "./pages/Account.jsx";
+import Sitemap from "./pages/Sitemap.jsx";
 
 function routerBasename() {
   const base = import.meta.env.BASE_URL || "/";
@@ -34,6 +35,16 @@ export default function App() {
             <Route path="/" element={<Home />} />
             <Route path="/house" element={<House />} />
             <Route path="/the-marahil" element={<Stages />} />
+            <Route
+              path="/discovery"
+              element={
+                <Collection
+                  ids={["discovery"]}
+                  title="Discovery"
+                  lede="The First Stages and The Pale Woods. Chapters, not random vials."
+                />
+              }
+            />
             <Route
               path="/woods"
               element={
@@ -66,6 +77,7 @@ export default function App() {
             <Route path="/order/:id" element={<Order />} />
             <Route path="/care" element={<Care />} />
             <Route path="/wholesale" element={<Wholesale />} />
+            <Route path="/sitemap" element={<Sitemap />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Route>
         </Routes>

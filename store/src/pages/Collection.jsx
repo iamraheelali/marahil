@@ -25,6 +25,7 @@ export default function Collection({ id, ids, title, lede, order }) {
   return (
     <section className="section collection">
       <div className="collection-head">
+        <p className="kicker">{lang === "ar" ? "المجموعة" : "Collection"}</p>
         <h2>{title}</h2>
         <p className="lede">{lede}</p>
         <p className="muted">

@@ -1,43 +1,130 @@
 import { Link } from "react-router-dom";
 import { useStore } from "../context/StoreContext.jsx";
 import ProductCard from "../components/ProductCard.jsx";
-import { STAGES_PAGE } from "../data/stages.js";
+import Reveal from "../components/Reveal.jsx";
+import { STAGE_SEQUENCE } from "../data/stages.js";
 import { brandSrc } from "../lib/brand.js";
 
 export default function Home() {
   const { t, lang, catalog, testimonials, avgRating } = useStore();
-  const featured = STAGES_PAGE.map((id) => catalog.find((p) => p.id === id)).filter(Boolean);
+  const featured = STAGE_SEQUENCE.slice(0, 4)
+    .map((id) => catalog.find((p) => p.id === id))
+    .filter(Boolean);
+
+  const bands = [
+    {
+      kicker: lang === "ar" ? "المراحل" : "The stages",
+      title: lang === "ar" ? "خمس مراحل وتوقيع المؤسسة" : "Five stages and the founder signature",
+      body:
+        lang === "ar"
+          ? "بدء، إشراق، وصل، ليل، أثر — ثم ماريا. الاكتشاف بجانبها."
+          : "Bad’, Ishraq, Wasl, Layl, Athar — then Maria. Discovery sits beside them.",
+      to: "/the-marahil",
+      cta: t.enter,
+      img: brandSrc("marahil-cons-lineup.png"),
+      alt: "MARAHIL stages",
+    },
+    {
+      kicker: lang === "ar" ? "صُنع في فرنسا" : "Made in France",
+      title: lang === "ar" ? "بارفان أغلظ لنفس الفصول" : "Parfum — the same chapters, denser",
+      body:
+        lang === "ar"
+          ? "إشراق ووصل كبارفان. ماريا تبقى في المراحل. أغطية بيوتر، علب عاجية."
+          : "Ishraq and Wasl as Parfum. Maria stays in the stages. Pewter caps, ivory boxes.",
+      to: "/the-marahil",
+      cta: lang === "ar" ? "البارفان" : "Haute Parfum",
+      img: brandSrc("marahil-haute-lineup.png"),
+      alt: "MARAHIL Parfum",
+      flip: true,
+    },
+    {
+      kicker: lang === "ar" ? "الجمال" : "Beauty",
+      title: lang === "ar" ? "أثر على البشرة وفي الغرفة" : "Athar on skin and in the room",
+      body:
+        lang === "ar"
+          ? "كريم، زيت حريري، وشمعة. يُجمَّع في الإمارات. أغطية بيوتر."
+          : "Cream, silk oil, and a candle. Assembled in the UAE. Pewter lids.",
+      to: "/rituals",
+      cta: lang === "ar" ? "الجمال" : "Beauty",
+      img: brandSrc("marahil-beauty-lineup.png"),
+      alt: "MARAHIL Beauty",
+    },
+  ];
 
   return (
     <>
-      <section className="hero">
-        <div className="hero-copy">
-          <div className="kicker">{t.heroKicker}</div>
+      <section className="film-hero">
+        <img className="film-still" src={brandSrc("marahil-cons-family.png")} alt="MARAHIL" />
+        <div className="film-veil" />
+        <div className="film-copy">
+          <p className="kicker">{t.heroKicker}</p>
           <h1>{t.heroTitle}</h1>
           <p className="lede">{t.heroBody}</p>
           <div className="btn-row">
-            <Link className="btn" to="/the-marahil">{t.enter}</Link>
-            <Link className="btn ghost" to="/woods">{t.woodsCta}</Link>
-            <Link className="btn ghost" to="/custom">{t.customCta}</Link>
+            <Link className="btn" to="/the-marahil">
+              {t.enter}
+            </Link>
+            <Link className="btn ghost" to="/house">
+              {t.nav.house}
+            </Link>
           </div>
         </div>
-        <div className="hero-visual">
-          <img src={brandSrc("marahil-prod-bad.png")} alt="MARAHIL Bad’" />
-        </div>
+        <p className="film-scroll">{lang === "ar" ? "مرّروا" : "Scroll"}</p>
       </section>
-      <section className="section">
-        <h2>{lang === "ar" ? "من البيت" : "From the house"}</h2>
-        <p className="lede">
-          {lang === "ar"
-            ? "زجاجة واحدة. ختم إم آر كيه على الغطاء والعلبة. اسم العصير يتغيّر فقط."
-            : "One bottle. The MRK seal on cap and box. Only the juice name changes."}
-        </p>
-        <div className="grid collection-grid">
-          {featured.map((p) => (
-            <ProductCard key={p.id} product={p} lang={lang} rating={avgRating(p.id)} />
-          ))}
-        </div>
-      </section>
+
+      {bands.map((b) => (
+        <Reveal key={b.title}>
+          <section className={`story-band${b.flip ? " is-flip" : ""}`}>
+            <div className="story-band-still">
+              <img src={b.img} alt={b.alt} />
+            </div>
+            <div className="story-band-copy">
+              <p className="kicker">{b.kicker}</p>
+              <h2>{b.title}</h2>
+              <p className="lede">{b.body}</p>
+              <Link className="btn" to={b.to}>
+                {b.cta}
+              </Link>
+            </div>
+          </section>
+        </Reveal>
+      ))}
+
+      <Reveal>
+        <section className="section precious">
+          <p className="kicker">{lang === "ar" ? "من البيت" : "From the house"}</p>
+          <h2>{lang === "ar" ? "قريب، ثابت، شخصي" : "Close, lasting, personal"}</h2>
+          <p className="lede">
+            {lang === "ar"
+              ? "زجاجة واحدة. ختم إم آر كيه على الغطاء والعلبة. اسم العصير يتغيّر فقط."
+              : "One bottle. The MRK seal on cap and box. Only the juice name changes."}
+          </p>
+          <div className="grid collection-grid">
+            {featured.map((p) => (
+              <ProductCard key={p.id} product={p} lang={lang} rating={avgRating(p.id)} />
+            ))}
+          </div>
+        </section>
+      </Reveal>
+
+      <Reveal>
+        <section className="gift-band">
+          <div>
+            <p className="kicker">{lang === "ar" ? "الاكتشاف" : "Discovery"}</p>
+            <h2>{lang === "ar" ? "المراحل الأولى" : "The First Stages"}</h2>
+            <p className="lede">
+              {lang === "ar"
+                ? "٢ مل من بدء وإشراق ووصل وليل وأثر، مع عينة ماريا."
+                : "2ml of Bad’, Ishraq, Wasl, Layl, Athar, and a Maria sample."}
+            </p>
+            <Link className="btn" to="/discovery">
+              {lang === "ar" ? "طقم الاكتشاف" : "Open Discovery"}
+            </Link>
+          </div>
+          <img src={brandSrc("marahil-cons-discovery.png")} alt="The First Stages" />
+        </section>
+      </Reveal>
+
       <section className="section">
         <h2>{t.testimonials}</h2>
         <div className="grid quotes">
