@@ -46,17 +46,19 @@ Checked 4 Sep 2026 via RDAP (404 = likely unregistered). Confirm and buy at a re
 
 | Domain | Role |
 |---|---|
-| **marahilparfums.com** | Primary commerce (recommended) |
+| **marahilparfums.com** | Primary commerce and mailboxes |
 | **thehouseofmarahil.com** | Alternate / redirect |
 | **mariaraheelkhan.com** | Founder / press |
-| **marahil.ae** | UAE signal if eligible (local presence / agent often required) |
+| **marahil.ae** | Optional UAE redirect if eligible — not a mailbox domain |
 | marahilperfumes.com, marahilparfum.com | Defensive |
+
+**Do not use as house URL or email:** `marahilparfumes.com`, `marahilparfumes.ae`, `marahilperfumes.ae` (extra *e*), or `@marahil.ae`.
 
 **Do not chase `marahil.com`** unless counsel says acquisition is clean and cheap. Maternity history plus the Ard Al Zaafaran SKU make it a poor brand URL.
 
 **Taken / avoid as primary:** marahil.com, marahil.co (appears registered).
 
-**Email:** `studio@`, `orders@`, `press@` on the primary domain.
+**Email (all on marahilparfums.com):** `studio@`, `press@`, `orders@`, `trade@`.
 
 ---
 

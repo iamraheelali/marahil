@@ -18,6 +18,7 @@ export const api = {
   testimonials: () => req("/api/testimonials"),
   postReview: (body) => req("/api/reviews", { method: "POST", headers: headers(), body: JSON.stringify(body) }),
   wholesale: (body) => req("/api/wholesale", { method: "POST", headers: headers(), body: JSON.stringify(body) }),
+  settings: () => req("/api/settings"),
   login: (username, password) =>
     req("/api/admin/login", { method: "POST", headers: headers(), body: JSON.stringify({ username, password }) }),
   categories: () => req("/api/categories"),
@@ -34,6 +35,9 @@ export const api = {
     req("/api/admin/samples", { method: "POST", headers: headers(token), body: JSON.stringify(sample) }),
   deleteSample: (token, id) => req(`/api/admin/samples/${id}`, { method: "DELETE", headers: headers(token) }),
   adminStats: (token) => req("/api/admin/stats", { headers: headers(token) }),
+  adminSettings: (token) => req("/api/admin/settings", { headers: headers(token) }),
+  saveSettings: (token, body) =>
+    req("/api/admin/settings", { method: "PATCH", headers: headers(token), body: JSON.stringify(body) }),
   adminReviews: (token) => req("/api/admin/reviews", { headers: headers(token) }),
   patchReview: (token, id, body) =>
     req(`/api/admin/reviews/${id}`, { method: "PATCH", headers: headers(token), body: JSON.stringify(body) }),

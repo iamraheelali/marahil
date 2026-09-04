@@ -14,11 +14,11 @@ export default function Home() {
   const bands = [
     {
       kicker: lang === "ar" ? "المراحل" : "The stages",
-      title: lang === "ar" ? "خمس مراحل وتوقيع المؤسسة" : "Five stages and the founder signature",
+      title: lang === "ar" ? "ستة فصول. بيت واحد." : "Six stages. One house.",
       body:
         lang === "ar"
-          ? "بدء، إشراق، وصل، ليل، أثر — ثم ماريا. الاكتشاف بجانبها."
-          : "Bad’, Ishraq, Wasl, Layl, Athar — then Maria. Discovery sits beside them.",
+          ? "بدء، إشراق، وصل، ليل، أثر، وماريا. الاكتشاف بجانبها."
+          : "Bad’, Ishraq, Wasl, Layl, Athar, and Maria. Discovery sits beside them.",
       to: "/the-marahil",
       cta: t.enter,
       img: brandSrc("marahil-cons-lineup.png"),
@@ -29,8 +29,8 @@ export default function Home() {
       title: lang === "ar" ? "بارفان أغلظ لنفس الفصول" : "Parfum — the same chapters, denser",
       body:
         lang === "ar"
-          ? "إشراق ووصل كبارفان. ماريا تبقى في المراحل. أغطية بيوتر، علب عاجية."
-          : "Ishraq and Wasl as Parfum. Maria stays in the stages. Pewter caps, ivory boxes.",
+          ? "إشراق ووصل كبارفان. ماريا تبقى في المراحل. أغطية سوداء وختم ذهبي."
+          : "Ishraq and Wasl as Parfum. Maria remains a stage. Black caps, gold crest.",
       to: "/the-marahil",
       cta: lang === "ar" ? "البارفان" : "Haute Parfum",
       img: brandSrc("marahil-haute-lineup.png"),
@@ -42,8 +42,8 @@ export default function Home() {
       title: lang === "ar" ? "أثر على البشرة وفي الغرفة" : "Athar on skin and in the room",
       body:
         lang === "ar"
-          ? "كريم، زيت حريري، وشمعة. يُجمَّع في الإمارات. أغطية بيوتر."
-          : "Cream, silk oil, and a candle. Assembled in the UAE. Pewter lids.",
+          ? "كريم، زيت حريري، رذاذ وبودرة. يُجمَّع في الإمارات. ختم ذهبي على أغطية سوداء."
+          : "Cream, silk oil, spray, and powder. Assembled in the UAE. Gold crest on black lids.",
       to: "/rituals",
       cta: lang === "ar" ? "الجمال" : "Beauty",
       img: brandSrc("marahil-beauty-lineup.png"),
@@ -53,8 +53,8 @@ export default function Home() {
 
   return (
     <>
-      <section className="film-hero">
-        <img className="film-still" src={brandSrc("marahil-cons-family.png")} alt="MARAHIL" />
+      <section className="film-hero film-hero-home">
+        <img className="film-still" src={brandSrc("marahil-home-hero.png")} alt="MARAHIL Ishraq" />
         <div className="film-veil" />
         <div className="film-copy">
           <p className="kicker">{t.heroKicker}</p>
@@ -96,8 +96,8 @@ export default function Home() {
           <h2>{lang === "ar" ? "قريب، ثابت، شخصي" : "Close, lasting, personal"}</h2>
           <p className="lede">
             {lang === "ar"
-              ? "زجاجة واحدة. ختم إم آر كيه على الغطاء والعلبة. اسم العصير يتغيّر فقط."
-              : "One bottle. The MRK seal on cap and box. Only the juice name changes."}
+              ? "زجاجة واحدة. ختم البيت الذهبي على الغطاء والعلبة. اسم العصير يتغيّر فقط."
+              : "One bottle. The gold house crest on cap and box. Only the juice name changes."}
           </p>
           <div className="grid collection-grid">
             {featured.map((p) => (

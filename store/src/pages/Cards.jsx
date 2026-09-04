@@ -1,4 +1,5 @@
 import { useState } from "react";
+import CatalogHead from "../components/CatalogHead.jsx";
 import ProductCard from "../components/ProductCard.jsx";
 import { useStore } from "../context/StoreContext.jsx";
 import { brandSrc } from "../lib/brand.js";
@@ -10,13 +11,16 @@ export default function Cards() {
   const gifts = byCollection("cards");
 
   return (
-    <section className="section">
-      <h2>{t.houseCard}</h2>
-      <p className="lede">
-        {lang === "ar"
-          ? "بطاقة البيت رقم إم آر كيه. تُحفظ على هذا الجهاز حتى نربط الحساب لاحقاً."
-          : "A pewter House Card numbered MRK. Stored on this device until accounts go live."}
-      </p>
+    <section className="section catalog-page">
+      <CatalogHead
+        kicker={lang === "ar" ? "البطاقات" : "Cards"}
+        title={t.houseCard}
+        lede={
+          lang === "ar"
+            ? "بطاقة البيت بختم مراحل الذهبي. تُحفظ على هذا الجهاز حتى نربط الحساب لاحقاً."
+            : "A gold-crest House Card. Stored on this device until accounts go live."
+        }
+      />
       <img className="house-card-visual" src={brandSrc("marahil-house-card.png")} alt="House Card" />
       {houseCard ? (
         <div>

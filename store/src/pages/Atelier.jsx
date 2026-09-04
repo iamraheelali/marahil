@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import CatalogHead from "../components/CatalogHead.jsx";
 import ProductCard from "../components/ProductCard.jsx";
 import { useStore } from "../context/StoreContext.jsx";
 import { brandSrc } from "../lib/brand.js";
@@ -17,7 +18,7 @@ function FinishCard({ product, lang }) {
       <Link to={`/product/${product.id}`} className="atelier-card-media">
         <img src={shot} alt={product.name[lang]} />
       </Link>
-      <div className="meta">Jewellery</div>
+      <div className="meta">{lang === "ar" ? "مجوهرات" : "Jewellery"}</div>
       <Link to={`/product/${product.id}`}>
         <h3>{product.name[lang]}</h3>
       </Link>
@@ -55,16 +56,17 @@ export default function Atelier() {
   const rest = all.filter((p) => !FEATURED.includes(p.id) && p.id !== "atelier-gift");
 
   return (
-    <section className="section atelier">
-      <div className="atelier-head">
-        <p className="kicker">{lang === "ar" ? "المرسم" : "Atelier"}</p>
-        <h2>{lang === "ar" ? "المجوهرات" : "Jewellery"}</h2>
-        <p className="lede">
-          {lang === "ar"
-            ? "أقراط، عقد، خواتم — تشطيب فضي أو ذهبي. إملاء صحيح: Jewellery، Earrings، Necklace، Rings. صُمِّم في أبوظبي. غطاء العطر يبقى بيوتر إم آر كيه."
-            : "Earrings, Necklace, Rings — silver finish or gold finish. Correct spelling: Jewellery, Earrings, Necklace, Rings. Designed in Abu Dhabi. The perfume cap stays pewter MRK."}
-        </p>
-      </div>
+    <section className="section catalog-page atelier">
+      <CatalogHead
+        kicker={lang === "ar" ? "المرسم" : "Atelier"}
+        title={lang === "ar" ? "المجوهرات" : "Jewellery"}
+        lede={
+          lang === "ar"
+            ? "أقراط، عقد، خواتم — تشطيب فضي أو ذهبي. صُمِّم في أبوظبي."
+            : "Earrings, Necklace, Rings — silver finish or gold finish. Designed in Abu Dhabi."
+        }
+        countLabel={lang === "ar" ? `${all.length} قطع` : `${all.length} pieces`}
+      />
       <div className="atelier-layout">
         <div className="atelier-cards">
           {featured.map((p) => (

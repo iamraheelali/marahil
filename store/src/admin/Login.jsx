@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { api } from "../api.js";
 import { brandSrc } from "../lib/brand.js";
 
@@ -66,9 +67,9 @@ export default function Login({ onAuth }) {
             {busy ? "Signing in…" : "Enter the desk"}
           </button>
         </form>
-        <a className="desk-gate-back" href="/">
+        <Link className="desk-gate-back" to="/">
           ← Public house
-        </a>
+        </Link>
       </div>
     </div>
   );

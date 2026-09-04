@@ -24,7 +24,7 @@ Study: [Amouage](https://amouage.com/) (story), [Initio UAE](https://ae.initiopa
 | Discovery | الاكتشاف | The First Marahil set |
 | Rituals | الطقوس | Hair mist, body oil (Athar, Maria) |
 | Journal | المفكرة | Short essays, not a SEO blog farm |
-| Atelier / Contact | المرسم | Dubai/UAE, press, wholesale later |
+| Atelier / Contact | المرسم | Abu Dhabi, UAE — studio@ / press@ marahilparfums.com |
 | Authenticity & care | الأصالة والعناية | IFRA, ingredients, how to spot the house codes |
 | Legal | قانوني | Privacy (PDPL), terms, VAT, shipping |
 
@@ -50,7 +50,7 @@ Payments later: Telr or PayTabs, Tabby, COD, Aramex / Emirates Post. VAT and tra
 
 ## Domain on the site
 
-Primary: **marahilparfums.com** (see [02-naming-and-lockups.md](02-naming-and-lockups.md)).  
+Primary: **marahilparfums.com**. Mailboxes: studio@, press@, orders@, trade@. Never marahilparfumes or .ae as the mailbox.  
 Redirect thehouseofmarahil.com. Do not market marahil.com.
 
 Language switcher: `EN` / `ع` in the header next to the stacked lockup. Avatar/favicon = MRK seal.

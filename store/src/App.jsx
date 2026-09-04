@@ -1,8 +1,10 @@
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import { StoreProvider } from "./context/StoreContext.jsx";
 import Layout from "./components/Layout.jsx";
+import ScrollToTop from "./components/ScrollToTop.jsx";
 import Home from "./pages/Home.jsx";
 import House from "./pages/House.jsx";
+import Shop from "./pages/Shop.jsx";
 import Collection, { ShopCategory } from "./pages/Collection.jsx";
 import Product from "./pages/Product.jsx";
 import Cart from "./pages/Cart.jsx";
@@ -29,44 +31,19 @@ export default function App() {
   return (
     <StoreProvider>
       <BrowserRouter basename={routerBasename()}>
+        <ScrollToTop />
         <Routes>
           <Route path="/admin" element={<Admin />} />
           <Route element={<Layout />}>
             <Route path="/" element={<Home />} />
             <Route path="/house" element={<House />} />
+            <Route path="/shop" element={<Shop />} />
             <Route path="/the-marahil" element={<Stages />} />
-            <Route
-              path="/discovery"
-              element={
-                <Collection
-                  ids={["discovery"]}
-                  title="Discovery"
-                  lede="The First Stages and The Pale Woods. Chapters, not random vials."
-                />
-              }
-            />
-            <Route
-              path="/woods"
-              element={
-                <Collection
-                  id="woods"
-                  title="The Pale Woods"
-                  lede="Hadu’, Sarw, Ghusn. Creamy sandalwood, cool cypress, a warm bough."
-                />
-              }
-            />
+            <Route path="/discovery" element={<Collection page="discovery" />} />
+            <Route path="/woods" element={<Collection page="woods" />} />
             <Route path="/rituals" element={<Beauty />} />
             <Route path="/atelier" element={<Atelier />} />
-            <Route
-              path="/hearth"
-              element={
-                <Collection
-                  id="home"
-                  title="Home"
-                  lede="Bakhoor and Scented Candles. Same olfactive DNA as the juices, for the room."
-                />
-              }
-            />
+            <Route path="/hearth" element={<Collection page="hearth" />} />
             <Route path="/collection/:id" element={<ShopCategory />} />
             <Route path="/custom" element={<Custom />} />
             <Route path="/product/:slug" element={<Product />} />

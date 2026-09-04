@@ -6,6 +6,8 @@ Unlisted shop (anyone with the link, not offered to Google): https://iamraheelal
 
 Source: https://github.com/iamraheelali/marahil
 
+House mail: studio@marahilparfums.com · press@marahilparfums.com (never marahilparfumes or .ae).
+
 Local preview (from `store/`):
 
 ```

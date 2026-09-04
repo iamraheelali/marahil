@@ -9,6 +9,7 @@ import { categories as seedCategories } from "../src/data/categories.js";
 import { stripPrivate, withCosts, marginAed, marginPct } from "../src/lib/money.js";
 import { canCancel, publicClient, ORDER_STATUSES } from "../src/lib/orders.js";
 import { ensureTestClient } from "./clients.mjs";
+import { DEFAULT_SETTINGS, normalizeSettings, publicSettings } from "../src/lib/settings.js";
 
 if (!existsSync(join(dataDir, "products.json"))) {
   console.log("No products.json yet — seeding data/db…");
@@ -21,6 +22,11 @@ if (!existsSync(join(dataDir, "categories.json"))) writeJson("categories.json", 
 if (!existsSync(join(dataDir, "samples.json"))) writeJson("samples.json", []);
 if (!existsSync(join(dataDir, "orders.json"))) writeJson("orders.json", []);
 if (!existsSync(join(dataDir, "clients.json"))) writeJson("clients.json", []);
+if (!existsSync(join(dataDir, "settings.json"))) writeJson("settings.json", DEFAULT_SETTINGS);
+
+function readSettings() {
+  return normalizeSettings(readJson("settings.json", DEFAULT_SETTINGS));
+}
 
 const app = express();
 app.use(cors({ origin: true }));
@@ -71,6 +77,8 @@ function slugify(value, fallback) {
 }
 
 app.get("/api/health", (_req, res) => res.json({ ok: true }));
+
+app.get("/api/settings", (_req, res) => res.json(publicSettings(readSettings())));
 
 app.get("/api/categories", (_req, res) => res.json(readJson("categories.json", seedCategories)));
 
@@ -132,6 +140,13 @@ app.post("/api/admin/login", (req, res) => {
     return res.status(401).json({ error: "Invalid login" });
   }
   res.json({ token: createSession(), username: admin.username });
+});
+
+app.get("/api/admin/settings", auth, (_req, res) => res.json(readSettings()));
+app.patch("/api/admin/settings", auth, (req, res) => {
+  const next = normalizeSettings({ ...readSettings(), megaNav: req.body?.megaNav });
+  writeJson("settings.json", next);
+  res.json(next);
 });
 
 app.get("/api/admin/stats", auth, (_req, res) => {

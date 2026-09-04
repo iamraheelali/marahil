@@ -6,6 +6,8 @@ import { payments } from "../config/payments.js";
 import { copy } from "../data/i18n.js";
 import { api } from "../api.js";
 import { stripPrivate } from "../lib/money.js";
+import { DEFAULT_SETTINGS } from "../lib/settings.js";
+import { withPublicImages } from "../lib/brand.js";
 
 const clientKey = "marahil-client-token";
 
@@ -31,10 +33,11 @@ export function StoreProvider({ children }) {
   const [clientToken, setClientToken] = useState(() => sessionStorage.getItem(clientKey) || "");
   const [client, setClient] = useState(null);
   const [clientOrders, setClientOrders] = useState([]);
-  const [catalog, setCatalog] = useState(() => fallbackProducts.map(stripPrivate));
+  const [catalog, setCatalog] = useState(() => fallbackProducts.map(stripPrivate).map(withPublicImages));
   const [reviews, setReviews] = useState(approvedSeed);
   const [testimonials, setTestimonials] = useState(featuredSeed);
   const [categories, setCategories] = useState(seedCategories);
+  const [settings, setSettings] = useState(DEFAULT_SETTINGS);
 
   useEffect(() => localStorage.setItem("marahil-lang", JSON.stringify(lang)), [lang]);
   useEffect(() => localStorage.setItem("marahil-cart", JSON.stringify(cart)), [cart]);
@@ -44,7 +47,7 @@ export function StoreProvider({ children }) {
 
   const refreshPublic = () => {
     api.products().then((rows) => {
-      if (Array.isArray(rows) && rows.length) setCatalog(rows.map(stripPrivate));
+      if (Array.isArray(rows) && rows.length) setCatalog(rows.map(stripPrivate).map(withPublicImages));
     }).catch(() => {});
     api.categories().then((rows) => {
       if (Array.isArray(rows) && rows.length) setCategories(rows);
@@ -54,6 +57,9 @@ export function StoreProvider({ children }) {
     }).catch(() => {});
     api.testimonials().then((rows) => {
       if (Array.isArray(rows) && rows.length) setTestimonials(rows);
+    }).catch(() => {});
+    api.settings().then((row) => {
+      if (row && typeof row === "object") setSettings({ megaNav: Boolean(row.megaNav) });
     }).catch(() => {});
   };
 
@@ -290,10 +296,11 @@ export function StoreProvider({ children }) {
       avgRating,
       addReview,
       testimonials,
+      settings,
       addTradeLead,
       refreshPublic,
     }),
-    [lang, t, dir, catalog, categories, cart, lines, subtotal, taxableSubtotal, vat, total, giftCredit, appliedGift, giftCodes, houseCard, orders, reviews, testimonials, client, clientToken, clientOrders]
+    [lang, t, dir, catalog, categories, cart, lines, subtotal, taxableSubtotal, vat, total, giftCredit, appliedGift, giftCodes, houseCard, orders, reviews, testimonials, settings, client, clientToken, clientOrders]
   );
 
   return <Store.Provider value={value}>{children}</Store.Provider>;

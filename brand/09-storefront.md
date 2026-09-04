@@ -33,7 +33,7 @@ Checkout still shows a card form so the UX is real. Submit writes the order to `
 - House of MARAHIL — *مراحل* as stages of becoming
 - Founder: Maria Raheel Khan
 - UAE original house (own juices), English and Arabic as equals
-- Atelier / contact: Dubai, UAE (placeholder address until license)
+- Atelier / contact: Abu Dhabi, UAE — studio@marahilparfums.com / press@marahilparfums.com
 - Do not name other perfume houses on this page
 
 ---

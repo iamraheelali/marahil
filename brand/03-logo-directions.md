@@ -1,6 +1,6 @@
 # Logo directions
 
-Three directions were explored. **Ship A + B.** C is a supporting signature, not a competing logo.
+Three directions were explored. **The gold circular crest is now the house mark.** Dual-script wordmark sits beside it. C remains a supporting signature.
 
 ---
 
@@ -26,18 +26,17 @@ Latin `MARAHIL` stacked over or beside Arabic `مراحل`, founder line in smal
 
 ---
 
-## Direction B — Stage seal (secondary)
+## Direction B — House crest (primary mark)
 
-Circular pewter coin. Five arcs = the five *marahil* (stages). Center: `MRK`. Optional outer ring: `MARAHIL` or `مراحل`. Hairline of stage red on the inner ring only.
-
-**Why it exists:** Avatars, wax, magnetic cap, favicon. A wordmark cannot survive at 32 px; a seal can.
+Circular gold-foil medallion on night black. Ornate arabesque filigree. Center: Arabic `مراحل`, then Latin `MARAHIL`. This is the cap, lid, box, favicon, and jewellery disc.
 
 **Best concept frames**
 
-- Full seal: [visuals/marahil-seal-mrk.png](visuals/marahil-seal-mrk.png)
-- Cap / favicon: [visuals/marahil-seal-favicon.png](visuals/marahil-seal-favicon.png)
+- Founder reference: [visuals/marahil-crest.jpg](visuals/marahil-crest.jpg)
+- Cap top: [visuals/marahil-cons-cap-top.png](visuals/marahil-cons-cap-top.png)
+- Favicon: [visuals/marahil-seal-favicon.png](visuals/marahil-seal-favicon.png)
 
-Do not use the seal as the website header. It is a stamp, not a title.
+The pewter five-arc `MRK` coin is retired. Do not mix the two seals.
 
 ---
 
@@ -56,9 +55,9 @@ Concept: [visuals/marahil-direction-c-founder.png](visuals/marahil-direction-c-f
 
 | Role | Direction |
 |---|---|
-| Primary logo | A — dual-script wordmark |
-| Secondary mark | B — MRK stage seal |
+| Primary logo | Gold circular crest (مراحل + MARAHIL) |
+| Header support | Dual-script wordmark beside the crest |
 | Human line | C — founder signature |
-| Color | Ink / ivory / pewter / stage red (see [00-brand-kit.md](00-brand-kit.md)) |
+| Color | Night / gold / ivory (see [00-brand-kit.md](00-brand-kit.md)) |
 
 Next craft step (out of this phase): a designer traces A and B into SVG with a real Arabic calligrapher check. Generated images are direction, not letter-perfect Arabic.

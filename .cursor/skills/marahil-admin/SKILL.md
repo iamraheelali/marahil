@@ -21,6 +21,7 @@ Filesystem JSON, not a hosted SQL db:
 - `store/data/db/reviews.json` — ratings; public sees `status: approved` only; Home testimonials need `featured: true`
 - `store/data/db/clients.json` — house client profiles (hashed passwords)
 - `store/data/db/orders.json` — orders with status (`received` can cancel; `processing` and after cannot)
+- `store/data/db/settings.json` — public chrome (`megaNav` default `false`). Seed does **not** overwrite this.
 - `store/data/uploads/` — uploaded stills (`/uploads/...`)
 - API: `store/server/index.js` on port 8787; Vite proxies `/api` and `/uploads`
 
@@ -29,17 +30,17 @@ After changing seed sources, run `npm run seed` from `store/`. Seed overwrites p
 ## Branding (do not drift)
 
 - House **MARAHIL** / **مراحل**. Juices are chapter names. Never a SKU named only Marahil.
-- Colours: Ink `#1A1614`, Ivory `#F4EFE6`, Pewter `#8A8580`, Stage red `#6B2A28` as a 1px hairline only.
-- Pewter metal only. Juice name on the plaque, never inside the MRK seal.
+- Colours: Night `#100E0C`, Gold `#D4AF37`, Ivory `#F4EFE6`, Ink `#1A1614`, Stage red `#6B2A28` as a 1px hairline only.
+- House mark: gold circular crest (Arabic مراحل + Latin MARAHIL). Matte-black cap with that crest on top. Juice name on the plaque, never inside the crest.
 - Spelling: Perfumes, Parfum, Eau de Parfum, Beauty, Jewellery, Bakhoor, Scented Candles, Oils, Creams.
 - Founded Abu Dhabi. French haute Parfum/Extrait; everyday, Beauty, Oils assembled in the UAE.
-- Bottle / box hardware: pewter MRK seal only. Jewellery may offer **silver finish** and **gold finish** (champagne plate); never put yellow gold on the cap.
+- Jewellery may offer **silver finish** and **gold finish** (champagne plate). The bottle cap is black with the gold crest, not a yellow-gold shell.
 - Prices excl. VAT; bag adds UAE 5% on goods; gift cards VAT-exempt.
-- Header: MARAHIL over مراحل, no cropped cap logo. Admin stays off public chrome.
+- Header: gold crest + MARAHIL over مراحل. Footer legal: MARAHIL by Maria Raheel Khan Perfumes and Cosmetics. Pack line: MRK Perfumes and Cosmetics. Tagline: Every stage has a scent. Emails: studio@ / press@ marahilparfums.com. Admin stays off public chrome.
 
 ## Admin capabilities
 
-Overview stats, **categories** (add / edit / delete when empty), products grouped by category, bilingual create/edit/hide/delete, **cost price (house only)** and **margin** vs sell excl. VAT, VAT 5% / exempt, multi-image upload, review approve/reject/feature/delete, trade leads, **full trade samples** (pack house set, FOC or invoiced with VAT), **clients** and order status.
+Overview stats, **categories** (add / edit / delete when empty), **site** (mega menus on/off), products grouped by category, bilingual create/edit/hide/delete, **cost price (house only)** and **margin** vs sell excl. VAT, VAT 5% / exempt, multi-image upload, review approve/reject/feature/delete, trade leads, **full trade samples** (pack house set, FOC or invoiced with VAT), **clients** and order status.
 
 Public `GET /api/products` strips `cost` / original price. Never show house cost on the storefront.
 

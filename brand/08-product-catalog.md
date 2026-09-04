@@ -5,7 +5,7 @@ Prices are **launch hypotheses in AED**, not final retail.
 
 Treat “location” as **lotion** in this line.
 
-**Consistent hardware (rebuilt):** one pewter `MARAHIL` / `MRK` cap seal on every bottle, box, and lid. Master: [visuals/marahil-cons-cap-top.png](visuals/marahil-cons-cap-top.png). Family pack: [visuals/marahil-cons-family.png](visuals/marahil-cons-family.png).
+**Consistent hardware:** gold MARAHIL crest on a matte-black cap, box, and lid. Master: [visuals/marahil-cons-cap-top.png](visuals/marahil-cons-cap-top.png). Family pack: [visuals/marahil-cons-family.png](visuals/marahil-cons-family.png).
 
 ---
 

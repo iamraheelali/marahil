@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useStore } from "../context/StoreContext.jsx";
+import { EMAILS, HOUSE_PLACE } from "../data/house.js";
 
 export default function Wholesale() {
   const { t, lang, addTradeLead } = useStore();
@@ -29,9 +30,15 @@ export default function Wholesale() {
         <p>
           {lang === "ar"
             ? "العطور الراقية تُصنع في فرنسا. الزيوت والكريمات والبخور والشموع تُجمَّع في الإمارات. الحد الأدنى للجملة يُحدَّد بعد الطلب."
-            : "Haute Parfums are Made in France. Oils, Creams, Bakhoor and Scented Candles are assembled in the UAE. Minimums set after enquiry."}
+            : "Haute Parfum is made in France. Oils, Creams, Bakhoor, and Scented Candles are assembled in the UAE. Minimums are set after enquiry."}
         </p>
-        <p className="muted">trade@marahilparfums.com · Abu Dhabi</p>
+        <p className="muted">
+          <a className="mail-link" href={`mailto:${EMAILS.trade}`}>
+            {EMAILS.trade}
+          </a>
+          {" · "}
+          {lang === "ar" ? HOUSE_PLACE.ar : HOUSE_PLACE.en}
+        </p>
       </div>
       {sent ? (
         <p className="notice">{lang === "ar" ? "وصل طلبكم للإدارة." : "Enquiry received. The admin portal will see it."}</p>

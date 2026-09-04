@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { useStore } from "../context/StoreContext.jsx";
+import { EMAILS } from "../data/house.js";
 
 const MAP = [
   {
@@ -13,6 +14,12 @@ const MAP = [
     ar: "البيت",
     to: "/house",
     job: { en: "Maria Raheel Khan. Meaning of مراحل. Abu Dhabi.", ar: "ماريا رحيل خان. معنى مراحل. أبوظبي." },
+  },
+  {
+    en: "Shop",
+    ar: "المتجر",
+    to: "/shop",
+    job: { en: "The house grid. Stages, Beauty, Home, Atelier.", ar: "شبكة البيت. المراحل والجمال والغرفة والمرسم." },
   },
   {
     en: "Stages",
@@ -69,6 +76,12 @@ const MAP = [
     job: { en: "Wholesale and retail.", ar: "جملة وتجزئة." },
   },
   {
+    en: "Cards",
+    ar: "البطاقات",
+    to: "/cards",
+    job: { en: "House Card and gift cards.", ar: "بطاقة البيت وبطاقات الإهداء." },
+  },
+  {
     en: "Account",
     ar: "الحساب",
     to: "/account",
@@ -84,8 +97,17 @@ export default function Sitemap() {
       <h2>{lang === "ar" ? "خريطة الموقع" : "Sitemap"}</h2>
       <p className="lede">
         {lang === "ar"
-          ? "بيت لا كتالوج عشوائي. المراحل فصول. الإلهام من بيوت العطور الراقية — الهوية تبقى مراحل: عاج وبيوتر وحبر."
-          : "A house, not a random catalogue. Stages are chapters. Structure studied from houses such as Amouage — the identity stays MARAHIL: ivory, pewter, ink."}
+          ? "بيت لا كتالوج عشوائي. المراحل فصول. الإلهام من بيوت العطور الراقية — الهوية تبقى مراحل: ليل وختم ذهبي وعاج."
+          : "A house, not a random catalogue. Stages are chapters. Structure studied from houses such as Amouage — the identity stays MARAHIL: night, gold crest, ivory."}
+      </p>
+      <p className="muted">
+        <a className="mail-link" href={`mailto:${EMAILS.studio}`}>
+          {EMAILS.studio}
+        </a>
+        {" · "}
+        <a className="mail-link" href={`mailto:${EMAILS.press}`}>
+          {EMAILS.press}
+        </a>
       </p>
       <ul className="sitemap-list">
         {MAP.map((row) => (

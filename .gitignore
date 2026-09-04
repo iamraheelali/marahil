@@ -8,3 +8,4 @@ store/data/uploads/*
 .DS_Store
 Thumbs.db
 *.log
+store/tmp-mobile/

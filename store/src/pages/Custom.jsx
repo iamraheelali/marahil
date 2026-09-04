@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useStore } from "../context/StoreContext.jsx";
 import { brandSrc } from "../lib/brand.js";
+import { EMAILS } from "../data/house.js";
 
 const FAMILIES = [
   { id: "woody", en: "Woody / sandalwood", ar: "خشبي / صندل" },
@@ -38,13 +39,13 @@ export default function Custom() {
       <h2>{lang === "ar" ? "عطر خاص" : "Custom Fragrance"}</h2>
       <p className="lede">
         {lang === "ar"
-          ? "صمموا عطراً أصلياً من مراحل: من موجزكم، أو بإلهام من عطر تحبونه. الناتج يُعبأ بختم إم آر كيه فقط — لا ننسخ علب البيوت الأخرى ولا شعاراتها ولا نبيع تقليداً باسم علامة أخرى."
-          : "Commission an original MARAHIL juice from your brief, or from a scent you already love as inspiration. It is bottled under the MRK seal only. We do not copy other houses’ packaging, logos, or sell a fake of another brand."}
+          ? "صمموا عطراً أصلياً من مراحل: من موجزكم، أو بإلهام من عطر تحبونه. الناتج يُعبأ بختم البيت الذهبي فقط — لا ننسخ علب البيوت الأخرى ولا شعاراتها ولا نبيع تقليداً باسم علامة أخرى."
+          : "Commission an original MARAHIL juice from your brief, or from a scent you already love as inspiration. It is bottled under the gold house crest only. We do not copy other houses’ packaging, logos, or sell a fake of another brand."}
       </p>
       <div className="notice">
         {lang === "ar"
-          ? "العطور الراقية (بارفان، إكستريه) تُصنع في فرنسا. الإصدارات اليومية، والزيوت، والبخور، والكريمات، والشموع تُجمَّع في الإمارات بنفس الحمض العطري."
-          : "Haute Parfum and Extrait are Made in France. Everyday Eau de Parfum, Oils, Bakhoor, Creams and Scented Candles are assembled in the UAE with the same olfactive DNA."}
+          ? "البارفان والإكستريه يُصنعان في فرنسا. أو دو بارفان اليومي، والزيوت، والبخور، والكريمات، والشموع تُجمَّع في الإمارات، من العصير نفسه."
+          : "Haute Parfum and Extrait are made in France. Everyday Eau de Parfum, Oils, Bakhoor, Creams, and Scented Candles are assembled in the UAE, from the same juice."}
       </div>
       <form
         className="split"
@@ -119,7 +120,10 @@ export default function Custom() {
           <p className="muted" style={{ marginTop: 12 }}>
             {lang === "ar"
               ? "الزجاجة والغطاء والختم نفسها لبيت مراحل. اسم عصيركم على اللوحة فقط."
-              : "Same house bottle, cap and MRK seal. Only your juice name on the plaque."}
+              : "Same house bottle, black cap, and gold house crest. Only your juice name on the plaque."}{" "}
+            <a className="mail-link" href={`mailto:${EMAILS.studio}`}>
+              {EMAILS.studio}
+            </a>
           </p>
         </div>
       </form>

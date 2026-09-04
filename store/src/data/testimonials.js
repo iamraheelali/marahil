@@ -48,8 +48,8 @@ export const seedReviews = [
     city: "Abu Dhabi",
     rating: 4,
     text: {
-      en: "Linear and clean. Not a crowd-pleaser oud. Fair price for the juice and the pewter cap.",
-      ar: "خطي ونظيف. ليس عوداً يملأ المجلس. سعر عادل للعصير وغطاء البيوتر.",
+      en: "Linear and clean. Not a crowd-pleaser oud. Fair price for the juice and the gold crest cap.",
+      ar: "خطي ونظيف. ليس عوداً يملأ المجلس. سعر عادل للعصير وغطاء الختم الذهبي.",
     },
     at: "2026-07-08",
     featured: false,
@@ -202,8 +202,8 @@ export const seedReviews = [
     city: "Abu Dhabi",
     rating: 4,
     text: {
-      en: "Saffron-rose in the room, pewter lid. Throw is polite, not a hotel lobby. Trim the wick.",
-      ar: "زعفران وورد في الغرفة وغطاء بيوتر. الأثر مهذب. قلّموا الفتيل.",
+      en: "Saffron-rose in the room, black lid with the gold crest. Throw is polite, not a hotel lobby. Trim the wick.",
+      ar: "زعفران وورد في الغرفة وغطاء أسود بختم ذهبي. الأثر مهذب. قلّموا الفتيل.",
     },
     at: "2026-08-22",
     featured: false,
@@ -216,8 +216,8 @@ export const seedReviews = [
     city: "Dubai",
     rating: 5,
     text: {
-      en: "MRK Seal Earrings — pewter, not costume gold. Light enough for all day. Matches the cap.",
-      ar: "أقراط ختم إم آر كيه — بيوتر لا ذهب رخيص. خفيفة لليوم كله.",
+      en: "Crest Earrings — champagne gold, not costume. Light enough for all day. Matches the bottle crest.",
+      ar: "أقراط الختم — ذهب شامبانيا لا رخيص. خفيفة لليوم كله.",
     },
     at: "2026-08-25",
     featured: false,
@@ -328,8 +328,8 @@ export const seedReviews = [
     city: "Sharjah",
     rating: 4,
     text: {
-      en: "Chain is fine, seal sits well. Please confirm pewter care on the site.",
-      ar: "السلسلة رفيعة والختم يثبت جيداً. أرجو توضيح العناية بالبيوتر.",
+      en: "Chain is fine, the gold crest sits well. Please confirm metal care on the site.",
+      ar: "السلسلة رفيعة والختم يثبت جيداً. أرجو توضيح العناية بالمعدن.",
     },
     at: "2026-09-04",
     featured: false,

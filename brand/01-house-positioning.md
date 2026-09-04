@@ -6,18 +6,22 @@ Founded in Abu Dhabi, United Arab Emirates.
 
 ## Our Story
 
-Every stage has a scent. MARAHIL means stages in Arabic — the quiet transitions we live through. Founded in Abu Dhabi by Maria Raheel Khan, the house blends French haute perfumery (Eau de Parfum, Parfum, Extrait) with Gulf heritage: Bakhoor, Oils, Creams and Scented Candles.
+Every stage has a scent. MARAHIL means stages in Arabic — the quiet turns we live through.
 
-High-end Parfums are Made in France. Everyday editions, Beauty and Jewellery are assembled in the UAE with the same olfactive DNA.
+Maria Raheel Khan founded MARAHIL in Abu Dhabi. The house joins French haute perfumery — Eau de Parfum, Parfum, Extrait — with Gulf heritage: Bakhoor, Oils, Creams, and Scented Candles.
 
-Spelling: Perfumes, Parfum, Eau de Parfum, Beauty, Jewellery, Earrings, Necklace, Rings, Bakhoor, Scented Candles, Oils, Creams.
+Haute Parfum is made in France. Everyday editions, Beauty, and Jewellery are assembled in the UAE, from the same juice.
+
+Arabic and English are written as originals. They share the bottle, the box, and the card. Neither waits as a translation.
 
 ---
 
 ## Meaning
 
-*مراحل* means stages: the quiet transitions we live through.  
-The house does not launch “a new floral for summer.” It launches a *marhala* — a stage you can wear.
+*مراحل* means stages — the quiet turns a life takes.  
+We do not launch a new floral because summer arrived. We name a *marhala*: a stage you can wear.
+
+The chapters stay: Bad’, Ishraq, Wasl, Layl, Athar, and Maria.
 
 One sentence: **Every stage has a scent.**
 

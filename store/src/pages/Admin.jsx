@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { api } from "../api.js";
 import Login from "../admin/Login.jsx";
 import Products from "../admin/Products.jsx";
 import Categories from "../admin/Categories.jsx";
 import Trade from "../admin/Trade.jsx";
-import Clients from "../admin/Clients.jsx";
+import Settings from "../admin/Settings.jsx";
 import { aed } from "../lib/money.js";
 
 const tokenKey = "marahil-admin-token";
@@ -148,14 +149,15 @@ function Desk({ token, onOut }) {
           ["reviews", "Reviews"],
           ["trade", "Trade"],
           ["clients", "Clients"],
+          ["site", "Site"],
         ].map(([id, label]) => (
           <button key={id} type="button" className={tab === id ? "on" : ""} onClick={() => setTab(id)}>
             {label}
           </button>
         ))}
-        <a href="/" className="desk-out">
+        <Link to="/" className="desk-out">
           Public site
-        </a>
+        </Link>
         <button type="button" className="desk-out" onClick={onOut}>
           Sign out
         </button>
@@ -169,6 +171,7 @@ function Desk({ token, onOut }) {
         {tab === "reviews" && <Reviews token={token} />}
         {tab === "trade" && <Trade token={token} products={products} categories={categories} />}
         {tab === "clients" && <Clients token={token} />}
+        {tab === "site" && <Settings token={token} />}
       </main>
     </div>
   );

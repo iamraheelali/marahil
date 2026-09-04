@@ -3,7 +3,7 @@ import { api } from "../api.js";
 import { aed, isVatExempt, marginAed, marginPct, priceInclVat, vatAmount } from "../lib/money.js";
 import { STAGES_PAGE, sortByIds } from "../data/stages.js";
 
-import { brandSrc } from "../lib/brand.js";
+import { publicSrc } from "../lib/brand.js";
 
 function emptyProduct(collection = "marahil") {
   return {
@@ -12,8 +12,8 @@ function emptyProduct(collection = "marahil") {
     published: true,
     vatExempt: collection === "cards",
     arabic: "",
-    image: brandSrc("marahil-cons-box-lid.png"),
-    images: [brandSrc("marahil-cons-box-lid.png")],
+    image: "/brand/marahil-cons-box-lid.png",
+    images: ["/brand/marahil-cons-box-lid.png"],
     name: { en: "", ar: "" },
     family: { en: "", ar: "" },
     blurb: { en: "", ar: "" },
@@ -22,10 +22,10 @@ function emptyProduct(collection = "marahil") {
     sizes: [{ id: "50", label: "50ml", price: 175, cost: 58 }],
     profile: {
       origin: { en: "Assembled in the UAE.", ar: "" },
-      materials: { en: "Glass, pewter MARAHIL / MRK seal.", ar: "" },
+      materials: { en: "Glass, black cap, gold MARAHIL crest.", ar: "" },
       contents: { en: "", ar: "" },
       juice: { en: "", ar: "" },
-      packaging: { en: "Ivory box, MRK seal.", ar: "" },
+      packaging: { en: "Black box, gold house crest.", ar: "" },
       skin: { en: "", ar: "" },
     },
   };
@@ -169,11 +169,11 @@ function ProductEditor({ token, categories, initial, onDone }) {
         Add size
       </button>
       <h3>Images</h3>
-      <p className="muted">Hero still first. Plaque = juice name only. Pewter MRK seal. No gold.</p>
+      <p className="muted">Hero still first. Plaque = juice name only. Gold house crest on black cap. No other logo on the bottle.</p>
       <div className="desk-thumbs">
         {(form.images || [form.image]).filter(Boolean).map((src) => (
           <button type="button" key={src} className={src === form.image ? "on" : ""} onClick={() => set("image", src)}>
-            <img src={src} alt="" />
+            <img src={publicSrc(src)} alt="" />
           </button>
         ))}
       </div>
@@ -322,7 +322,7 @@ export default function Products({ token, rows, categories, onReload }) {
                     return (
                       <tr key={p.id}>
                         <td>
-                          <img className="desk-mini" src={p.image} alt="" />
+                          <img className="desk-mini" src={publicSrc(p.image)} alt="" />
                         </td>
                         <td>
                           <strong>{p.name?.en}</strong>

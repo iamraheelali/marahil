@@ -1,6 +1,6 @@
 # Beauty and other products
 
-Perfume first. Beauty is a **ritual around the juice**, not a second brand.
+Perfumes first. Beauty is a **ritual around the juice**, not a second brand.
 
 Follow Initio (hair perfume + body cream) and Mahra M1 (hair/body from day one), not a full makeup counter.
 

@@ -1,6 +1,6 @@
 # Fragrance collection
 
-**Thesis:** five stages of becoming, one founder signature, plus a short **pale-woods** chapter of three juices (high-end, linear, quiet).  
+**Thesis:** six stages — Bad’, Ishraq, Wasl, Layl, Athar, and Maria — plus a short **pale-woods** chapter of three juices (high-end, linear, quiet).  
 These are **briefs for a perfumer**, not finished formulas. All unisex in copy. No “for him / for her” at launch.
 
 **Avoid cloning** Ard Al Zaafaran’s existing Marahil (lemon, oud, saffron, musk). Ishraq may use saffron; it must not smell like that SKU.
@@ -111,7 +111,7 @@ The pale-woods three occupy creamy sandalwood, cool cypress, and dry rosewood. W
 **Concentration:** extrait.  
 **Wearer:** signature, evening, the House page hero.  
 **Layer with:** Athar hair mist / body oil (Phase 1 beauty).  
-**Do not:** a celebrity-name juice that smells unrelated to the five stages.
+**Do not:** a celebrity-name juice that smells unrelated to the stages.
 
 ---
 
