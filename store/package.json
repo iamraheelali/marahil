@@ -1,0 +1,28 @@
+{
+  "name": "marahil-store",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "seed": "node server/seed.mjs",
+    "catalog": "node server/seed.mjs --catalog-only",
+    "server": "node server/index.js",
+    "web": "vite",
+    "dev": "concurrently -k npm:server npm:web",
+    "build": "vite build",
+    "preview": "vite preview --host --port 4173"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "multer": "^2.0.2",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-router-dom": "^7.6.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.5.0",
+    "concurrently": "^9.1.2",
+    "vite": "^6.3.0"
+  }
+}
