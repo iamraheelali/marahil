@@ -2,13 +2,9 @@
 
 House of MARAHIL (مراحل) by Maria Raheel Khan. Founded in Abu Dhabi.
 
-Live site: https://iamraheelali.github.io/marahil/
+Private GitHub repo (signed in as iamraheelali): https://github.com/iamraheelali/marahil
 
-Source: https://github.com/iamraheelali/marahil
-
-The live storefront is the `store/` app, published with GitHub Pages.
-
-Local preview (from `store/`):
+The public GitHub Pages URL is off. Browse the code on GitHub while logged in. Preview the shop locally from `store/`:
 
 ```
 npm install
